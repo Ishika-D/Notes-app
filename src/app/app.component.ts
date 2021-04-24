@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  title="Notes-app";
   notes:string[] = [];
   i=0;
   constructor() {
