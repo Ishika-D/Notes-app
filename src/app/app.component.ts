@@ -1,3 +1,5 @@
+import { style } from '@angular/animations';
+import { NONE_TYPE } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -21,6 +23,15 @@ export class AppComponent {
     this.i++;
     // this.mdoe={addme:" "};
     
-    (document.getElementById('textarea') as HTMLInputElement).innerText="null";
+    (document.getElementById('textarea') as HTMLInputElement).innerHTML=" ";
+  }
+  delete(k: number ){
+    let j:number;
+    for(j=k;j<=this.i;j++)
+    {
+      this.notes[j]=this.notes[j+1];
+    }
+    this.i=this.i-1;
+    
   }
 }

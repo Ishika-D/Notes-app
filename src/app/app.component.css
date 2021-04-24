@@ -1,3 +1,7 @@
+#edit:hover{
+    opacity: 1;
+    cursor: pointer;
+}
 h1{
     text-align: center;
     color: black;
@@ -15,23 +19,40 @@ h3{
 }
 #add{
     position: relative;
-    cursor: pointer;
     padding: 15px;
     float: right;
     border:none;
     background-color:rgb(62, 62, 216);
     font-size: 20px;
     font-weight: bold;
+    /* opacity: 0; */
+}
+#edit{
+    color:black;
+    float: right;
+    position: relative;
+    border:none; 
+    background-color: white;
+    opacity: 0;
 }
 #delete{
     color:black;
-    position: relative;
     float: right;
-    cursor: pointer;
-    
+    position: relative;
+    border:none;
+    background-color: white;
+    /* opacity: 0; */
 }
 textarea{
     width: 90%;
     padding: 10px;
     border-radius: 2px;
+}
+#cards{
+    display:flex;
+}
+#card{
+    width: 25%;
+    overflow: hidden;
+    padding: 1% 2%;
 }

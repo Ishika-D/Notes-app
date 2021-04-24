@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <span>Notes</span>
+  <span>Notes-taker</span>
 </mat-toolbar>
 <div id="main">
 <div id="container">
@@ -12,11 +12,20 @@
 <br>
 <h3>Your Notes</h3>
 <mat-divider></mat-divider>
-<mat-nav-list  >
-  <mat-list-item *ngFor="let options of notes;index as i;">
+<!-- <mat-nav-list  >
+  <mat-list-item *ngFor="let options of notes;index as i;" id="cards">
   {{notes[i]}}
-   <!-- <button (click)="delete()" id="delete"><mat-icon>delete</mat-icon></button> -->
+   <button  id="delete"><mat-icon>delete</mat-icon></button>
+   <button  id="delete"><mat-icon>edit</mat-icon></button>
    <mat-divider></mat-divider>
 </mat-list-item>
-</mat-nav-list>
+</mat-nav-list> -->
+<div id="cards">
+<mat-card *ngFor="let options of notes;index as i;" id="card">
+  <button  id="delete" (click)="delete(i)"><mat-icon>remove</mat-icon></button>
+  <button  id="edit"><mat-icon>edit</mat-icon></button>
+   <br>
+   {{notes[i]}}
+</mat-card>
+</div>
 </div>
