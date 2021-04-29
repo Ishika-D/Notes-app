@@ -1,38 +1,22 @@
-import { style } from '@angular/animations';
-import { NONE_TYPE } from '@angular/compiler';
-import { Component } from '@angular/core';
-
+import { NoteAddComponent } from './note-add/note-add.component';
+import { NotesService } from './Data/notes.service';
+import { Data } from './Data/Data.model';
+import { Component} from '@angular/core';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { Router, ActivatedRoute, ParamMap, RouterEvent } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
+
 export class AppComponent {
-  title="Notes-app";
-  notes:string[] = [];
-  i=0;
-  constructor() {
-  }
+  
+  
+  constructor(private NotesService : NotesService, public dialog: MatDialog, private route : ActivatedRoute) {}
   
   ngOnInit(): void {
   }
-  add(){
-    let msg: string;
-    // if((document.getElementById('notes') as HTMLInputElement).value!=null)
-    msg=(document.getElementById('notes') as HTMLInputElement).value;
-    this.notes[this.i]=msg;
-    this.i++;
-    // this.mdoe={addme:" "};
-    
-    (document.getElementById('textarea') as HTMLInputElement).innerHTML=" ";
-  }
-  delete(k: number ){
-    let j:number;
-    for(j=k;j<=this.i;j++)
-    {
-      this.notes[j]=this.notes[j+1];
-    }
-    this.i=this.i-1;
-    
-  }
+  
 }
