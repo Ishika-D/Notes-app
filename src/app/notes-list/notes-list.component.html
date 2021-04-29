@@ -1,0 +1,14 @@
+<div class="main-container">
+    <div class="search-bar">
+        <button mat-flat-button color="primary" class="add" [routerLink]="['new']" routerLinkActive="router-link-active" >
+            Add a note
+         </button>
+        <input matInput class="sipt" type="text" placeholder="Search your notes here">
+        <button matButton class="search">
+            <mat-icon>search</mat-icon>
+        </button>
+    </div>
+    <div class="notes-list" *ngFor="let note of notes; index as i">
+        <app-note-card [link]="i" [title]="note.title" [body]="note.note_body" (delete)="deleteNote(i)"></app-note-card>
+    </div>
+</div>

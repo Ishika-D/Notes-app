@@ -1,0 +1,33 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+   
+}
+.search-bar{
+     
+}
+.sipt{
+    width: 70%;
+    height: 30px;
+    margin-top: 15px;
+    margin-left: 48px;
+    
+}
+.search{
+    border: none;
+    height: 40px;
+    background-color: white;
+    padding-top: 15px;
+    justify-content: center;
+    border-radius: 100%;
+    float: right;
+    
+}
+.add{
+    margin-top: 15px;
+}

@@ -1,0 +1,21 @@
+<a >
+   <div class="note-card">
+        <mat-card class="n-card">
+            <button class="edit" matButton (click)="delete()">
+                <mat-icon>
+                    delete
+                </mat-icon>
+            </button>
+             <button class="edit" matButton [routerLink]="[link]" routerLinkActive="router-link-active" >
+                <mat-icon>
+                    edit
+                </mat-icon> 
+            </button>
+            <h4 class="n-title">{{title}}</h4>
+            <div class="n-body">
+                {{body}}
+            </div>
+        </mat-card>
+    </div>
+ 
+</a>
