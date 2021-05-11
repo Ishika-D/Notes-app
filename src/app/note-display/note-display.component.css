@@ -1,0 +1,18 @@
+.display{
+    width: 80%;
+    margin: 20px;
+    background: rgb(226, 224, 224);
+}
+.close{
+    float :right ;
+    
+}
+.title{
+    margin-top: 40px;
+    font-weight: bolder;
+    color:rgb(15, 56, 189);
+    font-size: 30px;
+}
+.body{
+    margin-top: 20px;
+}

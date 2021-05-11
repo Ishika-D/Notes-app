@@ -1,6 +1,6 @@
 export class Data{
     public title : string ;
     public note_body : string;
-    public id : number;
-    
+    // public notestitle : string[];
+    // public notesbody : string[];
 }

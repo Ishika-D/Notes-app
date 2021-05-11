@@ -1,1 +1,11 @@
-<h1>Note-display component testing...</h1>
+<mat-card class="display">
+    <button mat-button mat-icon-button (click)="close()" class="close">
+        <mat-icon>close</mat-icon>
+    </button>
+    <div class="title">
+        {{title}}
+    </div>
+    <div class="body">
+        {{body}}
+    </div>
+</mat-card>

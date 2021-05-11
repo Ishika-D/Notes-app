@@ -6,16 +6,13 @@
     margin-right: auto;
     padding: 10px;
     scroll-behavior: smooth;
-   
+    
 }
-.search-bar{
-     
-}
-.sipt{
-    width: 70%;
+#sipt{
+    width: 85%;
     height: 30px;
     margin-top: 15px;
-    margin-left: 48px;
+    
     
 }
 .search{
@@ -25,9 +22,51 @@
     padding-top: 15px;
     justify-content: center;
     border-radius: 100%;
-    float: right;
-    
+    color: blue;
+    cursor: pointer;
+    line-height: 55px;
 }
 .add{
     margin-top: 15px;
+    margin-bottom: 15px;
+    width: 90%;
+}
+#autocomp{
+    width: 85%;
+    min-height: 10px;
+    max-height: 400px;
+    overflow-y:hidden;
+    list-style: none;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgb(223, 219, 219);
+    /* pointer-events: none; */
+}
+#auto{
+    display: none;
+    margin-top: 15px;
+    
+}
+#history{
+    float: right;
+    margin-left: 10px;
+    display: none;
+}
+#li{
+    margin-left: 5px;
+
+}
+
+#li:hover{
+    background-color:rgb(207, 197, 197) ;
+    height: auto;
+}
+#notes-list{
+    width: 90%;
+    display: block;
+    overflow-y: hidden;
+    /* cursor: pointer; */
+}
+#display{
+    display: none;
 }

@@ -1,27 +1,31 @@
 a{
     text-decoration: none;
+    
 }
 .note-card{
-    background-color: white;
+    
     border-radius: 5px;
+    margin-bottom: 5px;
+    margin-top: 1px;
     cursor: pointer;
 }
 .n-card{
-    padding: 25px;
-    height: 55px;
+    padding: 20px;
+    height: 80px;
     overflow: hidden;
 }
 .n-title{
     font-weight: bold;
     color: hotpink;
+    margin: none;
 }
 .delete,.edit{
-    height: 28px;
+    height: 25px;
     border: none;
     float: right;
     background-color: white;
-    cursor: pointer;
     border-radius: 100%;
+    cursor: pointer;
 }
 .delete,.edit:active{
     background-color: rgba(128, 128, 128, 0.336);

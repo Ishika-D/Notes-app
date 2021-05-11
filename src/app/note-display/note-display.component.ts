@@ -1,8 +1,6 @@
-import { AppRoutingModule } from './../app-routing.module';
-import { ActivatedRoute, Params, Router, Routes } from '@angular/router';
-import { NotesService } from './../Data/notes.service';
-import { Data } from './../Data/Data.model';
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-note-display',
@@ -11,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NoteDisplayComponent implements OnInit {
 
+  @Input() title : string;
+  @Input() body : string;
   
-  constructor(private notesService : NotesService, private route : ActivatedRoute) { }
+  @Output('close') closeEvent : EventEmitter<void> = new EventEmitter<void>();
+
+  constructor() { }
 
   ngOnInit(): void {
+  }
+
+  close(){
+    this.closeEvent.emit();
   }
 }

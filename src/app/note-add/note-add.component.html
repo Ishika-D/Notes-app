@@ -2,13 +2,13 @@
     <form #note="ngForm">
         <mat-form-field class="title">
             <mat-label>Title</mat-label>
-            <input matInput type="text" class="Title" placeholder="Title" [(ngModel)]="data.title" [ngModelOptions]="{standalone: true}" required>
+            <input matInput type="text" class="Title" placeholder="Title" [(ngModel)]="data.title" [ngModelOptions]="{standalone: true}" spellcheck="false" autocomplete="off" required>
         </mat-form-field>
         <br>
         <mat-form-field class="body">
-            <textarea matInput class="Body" placeholder="Body" [(ngModel)]="data.note_body" [ngModelOptions]="{standalone: true}"> </textarea>
+            <textarea matInput class="Body" spellcheck="false" placeholder="Body" [(ngModel)]="data.note_body" [ngModelOptions]="{standalone: true}" > </textarea>
         </mat-form-field>
     </form>
     <button mat-flat-button class="Save" color="primary" type="submit" (click)="Save()" [routerLink]="['/']" routerLinkActive="router-link-active" >Save</button>
-    <button mat-flat-button class="Cancel" [routerLink]="['/']" routerLinkActive="router-link-active">Cancel</button>
+    <button mat-flat-button class="Cancel" (click)="clean()" [routerLink]="['/']" routerLinkActive="router-link-active">Cancel</button>
 </div>

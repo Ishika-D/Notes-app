@@ -1,5 +1,5 @@
 .form-container{
-    margin-left: 30%;
+    margin-left: 20%;
     
     
 }
@@ -9,7 +9,7 @@
 }
 .Body{
     height: 300px;
-    min-width: 700px;
+    min-width: 600px;
     background-color: rgba(128, 128, 128, 0.048);
     box-shadow: 1px 1px 2px 2px grey;
     border-bottom: white;

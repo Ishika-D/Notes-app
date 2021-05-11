@@ -1,4 +1,4 @@
-<a >
+<a (click)="display()">
    <div class="note-card">
         <mat-card class="n-card">
             <button class="edit" matButton (click)="delete()">
@@ -8,14 +8,15 @@
             </button>
              <button class="edit" matButton [routerLink]="[link]" routerLinkActive="router-link-active" >
                 <mat-icon>
-                    edit
+                   edit 
                 </mat-icon> 
-            </button>
+            </button>{{date}}
             <h4 class="n-title">{{title}}</h4>
             <div class="n-body">
                 {{body}}
-            </div>
+            </div>   
         </mat-card>
     </div>
- 
 </a>
+
+<!-- <mat-divider ></mat-divider> -->

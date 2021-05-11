@@ -1,14 +1,48 @@
 <div class="main-container">
-    <div class="search-bar">
+    <div id="something">
+        <div class="wrapper">
+            <input 
+                id="sipt" 
+                type="text" 
+                placeholder="Search your notes here" 
+                autocomplete="off"
+                (click) = "click($any($event.target).value)"
+                (keyup) = "search($any($event.target).value,$event)"
+                [(ngModel)]="aval"
+                 >
+            <button matButton class="search">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+        <div id="auto">
+            <div id="autocomp" class="autocomp" *ngFor="let note of list; index as i">
+                <li id="li" (mouseenter)="onclick(list[i])" > {{list[i]}} 
+                  <mat-icon id="history">history</mat-icon>  
+                </li>
+            </div>
+        </div>
+        
         <button mat-flat-button color="primary" class="add" [routerLink]="['new']" routerLinkActive="router-link-active" >
             Add a note
-         </button>
-        <input matInput class="sipt" type="text" placeholder="Search your notes here">
-        <button matButton class="search">
-            <mat-icon>search</mat-icon>
         </button>
+        <div id="lis">
+          <div id="notes-list" *ngFor="let note of N; index as i">
+                <app-note-card id="card"
+                    [link] = 'note.id'
+                    [title] = 'note.title'
+                    [body] = 'note.body' 
+                    [date] = 'note.date'
+                    (display) = "display(note.title,note.body)"
+                    (delete)="deleteNote(note.id)">
+                </app-note-card>
+            </div>  
+        </div> 
     </div>
-    <div class="notes-list" *ngFor="let note of notes; index as i">
-        <app-note-card [link]="i" [title]="note.title" [body]="note.note_body" (delete)="deleteNote(i)"></app-note-card>
+    <div id="display">
+        <app-note-display
+            [title]="Title"
+            [body] ="Body"
+            (close) = "close()" >
+        </app-note-display>
     </div>
-</div>
+</div> 

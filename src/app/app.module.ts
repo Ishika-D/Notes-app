@@ -1,12 +1,19 @@
+
+import { environment } from './../environments/environment';
 import { MatSliderModule } from '@angular/material/slider';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireDatabaseModule} from '@angular/fire/database';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoteDisplayComponent } from './note-display/note-display.component';
 import { NoteAddComponent } from './note-add/note-add.component';
 
+import { MatSortModule } from '@angular/material/sort';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule} from '@angular/material/button';
 import { MatExpansionModule} from '@angular/material/expansion';
@@ -25,6 +32,7 @@ import { FormsModule } from '@angular/forms';
 import { NotesListComponent } from './notes-list/notes-list.component';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -37,9 +45,14 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireDatabaseModule,
     MatDividerModule,
     MatDialogModule,
     FormsModule,
+    MatSortModule,
+    MatAutocompleteModule,
     MatToolbarModule,
     MatCardModule,
     MatIconModule,
@@ -55,7 +68,7 @@ import { MainLayoutComponent } from './main-layout/main-layout.component';
     MatInputModule,
     MatRadioModule,
   ],
-  providers: [],
+  providers: [  ],
   bootstrap: [ AppComponent]
 })
 export class AppModule { 
