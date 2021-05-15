@@ -16,12 +16,12 @@ export class NoteCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    //this.new.emit(true);
   }
+  //will emit that the note is clicked
   display(){
     this.displayEvent.emit();
   }
-
+  //will tell that the delete button is clicked
   delete(){
     this.deleteEvent.emit();
   }

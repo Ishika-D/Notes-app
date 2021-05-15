@@ -2,11 +2,11 @@
     <form #note="ngForm">
         <mat-form-field class="title">
             <mat-label>Title</mat-label>
-            <input matInput type="text" class="Title" placeholder="Title" [(ngModel)]="data.title" [ngModelOptions]="{standalone: true}" spellcheck="false" autocomplete="off" required>
+            <input matInput type="text" class="Title" placeholder="Title" [(ngModel)]="title" [ngModelOptions]="{standalone: true}" spellcheck="false" autocomplete="off" required>
         </mat-form-field>
         <br>
         <mat-form-field class="body">
-            <textarea matInput class="Body" spellcheck="false" placeholder="Body" [(ngModel)]="data.note_body" [ngModelOptions]="{standalone: true}" > </textarea>
+            <textarea matInput class="Body" spellcheck="false" placeholder="Body" [(ngModel)]="body" [ngModelOptions]="{standalone: true}" > </textarea>
         </mat-form-field>
     </form>
     <button mat-flat-button class="Save" color="primary" type="submit" (click)="Save()" [routerLink]="['/']" routerLinkActive="router-link-active" >Save</button>
